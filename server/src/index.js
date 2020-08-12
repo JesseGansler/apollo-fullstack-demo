@@ -28,7 +28,12 @@ const server = new ApolloServer({
   dataSources: () => ({
     launchAPI: new LaunchAPI(),
     userAPI: new UserAPI({ store })
-  })
+  }),
+  //https://studio.apollographql.com/org/originall-llc/graphs?loginAttempt=1&overlay=publish-your-schema&serviceId=apollo-graphql-demo
+  engine: {    
+    reportSchema: true,
+    variant: "current"
+  }
 });
 
 server.listen().then(({ url }) => {
