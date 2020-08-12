@@ -44,8 +44,25 @@ const typeDefs = gql`
     LARGE
   }
 
-  type Query {
+  """
+  Simple wrapper around our list of launches that contains a cursor to the
+  last item in the list. Pass this cursor to the launches query to fetch results
+  after these.
+  """
+  type LaunchConnection { # add this below the Query type as an additional type.
+    cursor: String!
+    hasMore: Boolean!
     launches: [Launch]!
+  }
+
+  type Query {
+    
+    launches(
+      """
+      pagesize: number of results to show (must be gte 1.default: 20)
+      after: add a cursor, it will only return results 'after' the specified cursor
+      """
+      pageSize: Int, after: String): LaunchConnection!
     launch(id: ID!): Launch
     me: User
   }
