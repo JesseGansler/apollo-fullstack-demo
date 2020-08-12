@@ -1,5 +1,6 @@
 //npm run codegen - generate typescript versions of queries and mutations
 //https://www.apollographql.com/docs/tutorial/queries/
+//https://flaviocopes.com/apollo/
 import {
     ApolloClient,
     InMemoryCache,
