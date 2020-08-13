@@ -1,6 +1,7 @@
-//npm run codegen - generate typescript versions of queries and mutations
-//https://www.apollographql.com/docs/tutorial/queries/
-//https://flaviocopes.com/apollo/
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Pages from './pages';
+import injectStyles from './styles';
 import {
     ApolloClient,
     InMemoryCache,
@@ -13,10 +14,10 @@ import {
     uri: 'http://localhost:4000/',
     cache: new InMemoryCache()
 });
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Pages from './pages';
-import injectStyles from './styles';
+//npm run codegen - generate typescript versions of queries and mutations
+//https://www.apollographql.com/docs/tutorial/queries/
+//https://flaviocopes.com/apollo/
+
 
 // previous variable declarations
 
