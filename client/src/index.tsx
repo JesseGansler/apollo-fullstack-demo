@@ -10,9 +10,9 @@ import {
     gql
     } from '@apollo/client';
 
-    const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
-    uri: 'http://localhost:4000/',
-    cache: new InMemoryCache()
+const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
+  uri: 'http://localhost:4000/',
+  cache: new InMemoryCache()
 });
 //npm run codegen - generate typescript versions of queries and mutations
 //https://www.apollographql.com/docs/tutorial/queries/
